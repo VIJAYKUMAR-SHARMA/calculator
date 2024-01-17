@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calcutor</title>
+    <link rel="stylesheet" href="styal2.css">
+</head>
+<body>
+    <div class="container">
+        <div > <input id="bar" type="text" disabled>
+        </div>
+        <button onclick   ="Clear()">c</button>
+        <div class="row-button">
+            <input id=" row" value="7"type="button" onclick="myvalues('7')"/>
+            <input id=" row" value="8"type="button" onclick="myvalues('8')"/>
+            <input id=" row" value="9"type="button" onclick="myvalues('9')"/>
+            <input id=" row" value="*"type="button" onclick="myvalues('*')"/>
+
+        </div>
+        <div class="row-button">
+            <input id=" row" value="4"type="button" onclick="myvalues('4')"/>
+            <input id=" row" value="5"type="button" onclick="myvalues('5')"/>
+            <input id=" row" value="6"type="button" onclick="myvalues('6')"/>
+            <input id=" row" value="-"type="button" onclick="myvalues('-')"/>
+
+        </div>
+        <div class="row-button">
+            <input id=" row" value="1"type="button" onclick="myvalues('1')"/>
+            <input id=" row" value="2"type="button" onclick="myvalues('2')"/>
+            <input id=" row" value="3"type="button" onclick="myvalues('3')"/>
+            <input id=" row" value="+"type="button" onclick="myvalues('+')"/>
+
+        </div>
+        <div class="row-button">
+            <input id=" row" value="0"type="button" onclick="myvalues('0')"/>
+            <input id=" row" value="."type="button" onclick="myvalues('.')"/>
+            <input id=" row" value="="type="button" onclick="calculator()"/>
+            <input id=" row" value="/"type="button" onclick="myvalues('/')"/>
+
+        </div>
+    </div>
+    <script>
+        function myvalues(e){
+            const inputvalue= document.getElementById("bar").value += e
+            console.log (e)
+        }
+        function calculator(){
+            const resultvalue=document.getElementById("bar").value
+            const changevalue=eval(resultvalue)
+            console.log(changevalue)
+            document.getElementById("bar").value=changevalue
+        }
+        function Clear(){
+            document.getElementById("bar").value=""
+
+        }
+    </script>
+    
+</body>
+</html>
