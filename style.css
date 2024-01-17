@@ -20,6 +20,8 @@ body{
     width: 100%;
     background-image: url("image/nn.avif");
     background-size: cover;
+    align-items: center;
+    display: flex;
     
 }
 
